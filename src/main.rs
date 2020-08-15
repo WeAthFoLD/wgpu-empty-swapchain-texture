@@ -154,13 +154,13 @@ fn main() {
                 }
             }
             Event::RedrawRequested(_) => {
-            }
-            Event::MainEventsCleared => {
                 state.update();
                 state.render();
+            }
+            Event::MainEventsCleared => {
                 // RedrawRequested will only trigger once, unless we manually
                 // request it.
-                // window.request_redraw();
+                window.request_redraw();
             }
             _ => {}
         }
